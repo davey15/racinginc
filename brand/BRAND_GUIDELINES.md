@@ -16,7 +16,7 @@
 - **Smart without being a lecture:** we have the qualifications to go deep and the judgement not to. Our competitors are the engineering channels; we are the funny, sharp friends at the pub who know how it actually works.
 - **Business of racing:** the tagline promises money and power, not just lap times. Budgets, contracts, politics and personalities are as much our turf as strategy.
 
-**Open question:** "money, power, speed" suggests a *business and drama of F1* angle. Confirm that's intentional, because it shapes every content decision.
+**Confirmed:** the angle is the business, economics and politics of F1 (money, power, speed), delivered by hosts who are both smart and funny. Chloe is an engineer; Vanessa has a political science degree from Harvard. Think of it as sharp analysis with snark, not a dry business show.
 
 ## 2. Audience
 
@@ -39,53 +39,53 @@ Anyone who appreciates F1, from the casual fan to the die-hard, who wants entert
 
 ## 4. Logo system
 
-### 4.1 Primary wordmark (exists)
-Bold, extended, italic **RACING** over silver **INC.** flanked by speed lines, with the tagline in wide-tracked caps beneath. White and silver on black.
+### 4.1 Primary wordmark: "RAC · IN · GC"
+**RACING** and **INC.** share the same letters ("ING" / "INC"), so we collapse the name into one line:
 
-- Master files should be re-drawn as **vector (SVG)**. The current files are raster images. Needed variants: horizontal, stacked, white-on-black, black-on-white, single-color.
-- Minimum clear space: the height of the "I" in INC. on all sides.
-- Don't stretch, recolor, add effects, or place on busy photo areas without a dark scrim.
+- **RAC** in white
+- **IN** in Rosso Corsa red (shared by both words)
+- a **fused G+C** glyph in red as the final letter: the **G** completes RACING, the **C** completes INC.
 
-### 4.2 Symbol: G + C monogram (in progress)
-Used as favicon, YouTube/Instagram/X avatar, and watermark. It must work at 16 px and in a circular crop.
+The mark reads as both words at once. Black field, white and red, silver tagline beneath in wide-tracked caps.
 
-Three original concepts are in `brand/symbol/` (preview: `concepts-preview.png`):
+- Files: `brand/logo/wordmark-red.svg` (vector, text converted to outlines). Regenerate with `brand/logo/build_logo.py`.
+- Typeface used for the draft: Saira 900 Italic (open license). The previous two-line wordmark (RACING / INC.) from the draft cover and banner stays as the **stacked variant** until the new one is approved.
+- Needed variants: horizontal (done), stacked, white-on-black, black-on-white, single-color.
+- Clear space: the width of the "I" on all sides. Don't stretch, outline, or add effects; no placing on busy photo areas without a dark scrim.
 
-| | Concept | Idea | Notes |
-|---|---|---|---|
-| **A** | Interlock | Silver C and white G overlapping, italic slant | Reads as "CG" instantly; busiest at small sizes |
-| **B** | Checker ring | Ring of checkered cells forming a C, with a yellow G bar | Strongest racing cue; too detailed for 16 px, so use as a large brand graphic |
-| **C** | Circuit | Heavy C with a start/finish-line checker as the G bar | **Recommended (proposed).** Bold, simple, legible tiny; the G is implied by the checker bar |
+### 4.2 Symbol: the fused G+C
+The final letter of the wordmark doubles as the symbol (favicon, avatars, watermark): a G ring with a C nested inside, and the G's bar entering the C's mouth. It works in a circular crop and holds up at small sizes (`brand/logo/symbol-red.svg`).
 
-These are rough first-pass sketches, not final artwork. They are original geometry; the screenshots you shared are inspiration only and should not be traced (they're other designers' logos, and we'll want to trademark ours).
+This is a first-pass draw of the idea, not final artwork. Before we lock it:
+- Re-draw the glyph by hand so the bar and terminals are optically balanced.
+- Test at 16 px (favicon) and 32 px, and consider a simplified single-ring version for tiny sizes.
+- Run a trademark search on the final mark.
 
-**Needs your answer:** what do **G** and **C** stand for? "Racing Inc." doesn't contain either letter. If it's a person's initials or a nickname, tell me. If it doesn't tie to the name, a symbol built from **R** + **I**, or a checker/flag mark, may be a stronger and more defensible choice.
+Earlier standalone G+C concepts are in `brand/symbol/archive/` for reference. The screenshots you shared were inspiration only; the symbol is original geometry and should not be traced from other designers' logos.
 
 ### 4.3 Avatars
-Social avatars crop to a circle: keep the symbol inside the central ~80%. Black background, white mark, yellow only if used.
+Social avatars crop to a circle: keep the symbol inside the central ~80%. Black background, red mark.
 
 ## 5. Color
 
-Today's identity is **monochrome**: black, white, silver, plus the checkered-flag graphite. Keep that as the base.
+The girls love black, so the identity is **black-first**, with white and silver, and **one accent: Rosso Corsa red**.
 
 | Token | Hex | Use |
 |---|---|---|
 | Black | `#0A0A0B` | Primary background |
 | Carbon | `#17181A` | Cards, surfaces |
 | Graphite | `#5B6066` | Checker mid-tone, borders |
-| Silver | `#9AA0A6` | "INC.", secondary text |
-| White | `#FFFFFF` | Wordmark, primary text |
-| **Flag Yellow** **(proposed)** | `#FFC400` | The single accent: CTAs, highlights, "LIVE" badges |
+| Silver | `#9AA0A6` | Tagline, secondary text |
+| White | `#FFFFFF` | "RAC", primary text |
+| **Rosso Corsa** | `#D40000` | "IN", the G+C symbol, CTAs, "LIVE" badges |
 
-**Why yellow:** F1 is saturated with red (Ferrari, F1 itself, and half the grid), and red would make us look like a fan site of someone else. The caution flag is race-day language, high-contrast on black, and ties to "collide" (drama, incidents). An alternative is a deep **signal red**. Pick one accent and use it sparingly (under ~5% of any layout).
+**Note:** red is also Ferrari's and F1's color, so on a red-heavy sport we need to look like ours, not someone else's: black is the dominant color, red is sparing (under ~15% of a layout), and we never use F1's exact red (`#E10600`). Caution-flag yellow (`#FFC400`) remains available as a secondary highlight if we want one.
 
-Contrast: white on black and silver on black both pass WCAG AA for body text. Yellow on black passes; **yellow on white does not**: never put yellow text on white.
+Contrast: white and silver on black pass WCAG AA for body text. **Red `#D40000` on black is for large text and graphics only** (about 3.6:1; it fails AA for small text). Use white for body copy and small labels, and never use red text on a light background for small sizes.
 
 ## 6. Typography
 
-**Your reference:** the "F1 fonts" download page (imjustcreative.com). I couldn't open the page from my environment, so this is based on what those downloads normally are.
-
-> ⚠️ **Licensing warning (please read).** The fonts commonly distributed as "F1 fonts" are Formula 1's own typefaces (the *Formula1* family). Those are proprietary to Formula One and are not licensed for third-party commercial use. Free-download sites often rehost them without permission. Building a monetized brand on them risks a takedown or a legal letter, and it would make our identity look like official F1 branding, which works against the independent positioning. Before using any of them, check the license on the page itself. My recommendation is to **not** use them.
+**Your reference:** the F1-style fonts from imjustcreative.com. The page states they are not official F1 fonts but were created anew and named differently, which is good news. Two caveats: the download is no longer available, and I couldn't open the page to read its license, so I can't confirm commercial-use terms. They're out as an option now anyway.
 
 **Recommended (proposed), all open-licensed (SIL OFL), free for commercial use, and self-hostable on our Railway site:**
 
@@ -97,12 +97,12 @@ Contrast: white on black and silver on black both pass WCAG AA for body text. Ye
 
 Self-host the font files rather than loading from Google Fonts, which fits the "control our own data" goal and avoids third-party requests.
 
-The wordmark itself stays as the custom-drawn logo, never retyped in a font.
+The wordmark is outlined vector artwork, never retyped live in a font.
 
 ## 7. Imagery and layout
 
 - **Photography:** black-and-white hosts' portraits on a checkered-flag background (current cover). Keep consistent: same crop, contrast and background treatment for both hosts.
-- **Thumbnails:** one face, big emotion, 3 words max, white text with a yellow highlight word.
+- **Thumbnails:** one face, big emotion, 3 words max, white text with one red highlight word.
 - **Checkered flag:** use as texture at low contrast, never behind body text.
 - **Cleanup needed on the draft cover:** the hosts' photo contains a faint vertical "HOLLYWOOD" watermark near the center. Remove it, and confirm we have rights to both portraits and the flag image.
 - **Rights:** F1 logos, team logos, driver likenesses and race footage are third-party property. Our brand never includes them; commentary and news use should follow fair-use practice (see §10).
@@ -127,9 +127,8 @@ Handles are all **@racingincmedia**:
 Tokens are in `brand/tokens.css` so the site, Substack posts and graphics share one palette. The site will be custom-built on **Supabase** (data) and **Railway** (hosting).
 
 ## 10. Open items
-1. What do G and C stand for? (§4.2)
-2. Accent color: yellow or red? (§5)
-3. Approve dropping the F1 fonts for Saira + Inter? (§6)
-4. NDA / source-naming rules once the hosts have confirmed. (§3)
-5. Show title and segment names. "Racing Inc." is the brand; is the show called something else?
-6. Trademark search for "Racing Inc." and the final symbol before we invest heavily. "Racing Inc." is a generic-sounding name, so check for conflicts in media/entertainment.
+1. Approve the RAC · IN · GC wordmark direction and the red accent. If approved, I'll hand-refine the glyph and produce favicon/avatar exports.
+2. The wordmark's letterforms: Saira is a stand-in. Do we want a custom-drawn extended italic like the current logo?
+3. NDA / source-naming rules once the hosts have confirmed (§3).
+4. Show title and segment names. "Racing Inc." is the brand; is the show called something else?
+5. Trademark search for "Racing Inc." and the final symbol before we invest heavily. "Racing Inc." is a generic-sounding name, so check for conflicts in media/entertainment.

@@ -6,7 +6,8 @@
   --ri-graphite: #5B6066;   /* checker mid-tone, borders */
   --ri-silver: #9AA0A6;     /* "INC." silver, secondary text on dark */
   --ri-white: #FFFFFF;      /* primary text on dark, wordmark */
-  --ri-flag: #FFC400;       /* single accent: caution-flag yellow (proposed) */
+  --ri-red: #D40000;        /* single accent: Rosso Corsa; large text and graphics only on black */
+  --ri-flag: #FFC400;       /* optional secondary highlight: caution-flag yellow */
 
   /* Type (all open-licensed; see guidelines for the F1 font caveat) */
   --ri-font-display: "Saira", "Arial Narrow", sans-serif;   /* headlines: 800 italic */
