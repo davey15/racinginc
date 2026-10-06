@@ -49,12 +49,12 @@ Anyone who appreciates F1, from the casual fan to the die-hard, who wants entert
 The mark reads as both words at once. Black field, white and red, silver tagline beneath in wide-tracked caps.
 
 - Files: `brand/logo/wordmark-red.svg` (vector, text converted to outlines). Regenerate with `brand/logo/build_logo.py`.
-- Typeface used for the draft: Saira 900 Italic (open license). The previous two-line wordmark (RACING / INC.) from the draft cover and banner stays as the **stacked variant** until the new one is approved.
+- Typeface used for the draft: Unbounded 900 (open license), set in outlines and slanted 10°. The previous two-line wordmark (RACING / INC.) from the draft cover and banner stays as the **stacked variant** until the new one is approved.
 - Needed variants: horizontal (done), stacked, white-on-black, black-on-white, single-color.
 - Clear space: the width of the "I" on all sides. Don't stretch, outline, or add effects; no placing on busy photo areas without a dark scrim.
 
 ### 4.2 Symbol: the fused G+C
-The final letter of the wordmark doubles as the symbol (favicon, avatars, watermark): a G ring with a C nested inside, and the G's bar entering the C's mouth. It works in a circular crop and holds up at small sizes (`brand/logo/symbol-red.svg`).
+The final letter of the wordmark doubles as the symbol (favicon, avatars, watermark): a squared G block with a C nested inside, and the G's bar entering the C's mouth. Like your "Gg" sample, it fills its box. It works in a circular crop and holds up at small sizes (`brand/logo/symbol-red.svg`).
 
 This is a first-pass draw of the idea, not final artwork. Before we lock it:
 - Re-draw the glyph by hand so the bar and terminals are optically balanced.
@@ -85,15 +85,19 @@ Contrast: white and silver on black pass WCAG AA for body text. **Red `#D40000` 
 
 ## 6. Typography
 
-**Your reference:** the F1-style fonts from imjustcreative.com. The page states they are not official F1 fonts but were created anew and named differently, which is good news. Two caveats: the download is no longer available, and I couldn't open the page to read its license, so I can't confirm commercial-use terms. They're out as an option now anyway.
+**What you like (from your samples):** wide, squared-off, heavy letterforms where each character fills its whole block (the Turbo/Torque style). Saira was too narrow and curvy, so it's out.
 
-**Recommended (proposed), all open-licensed (SIL OFL), free for commercial use, and self-hostable on our Railway site:**
+**Recommended (proposed), all open-licensed (SIL OFL), free for commercial use, self-hostable:**
 
-| Role | Font | Weight / style | Why |
+| Role | Font | Style | Why |
 |---|---|---|---|
-| Display / headlines | **Saira** | 800 Italic, uppercase | Wide, sporty, italic like the wordmark |
-| Labels / taglines | **Saira** | 500, uppercase, tracking +0.28em | Matches the tracked tagline in the logo |
-| Body / UI | **Inter** | 400 / 600 | Highly readable at any size |
+| Wordmark / display headlines | **Unbounded** | 900, uppercase | Wide, rounded-square, full-block characters. Closest open match to your Torque/Turbo samples |
+| Labels / tagline | **Unbounded** | 500, uppercase, wide tracking | Same family, lighter; matches the tracked tagline |
+| Body / UI | **Inter** | 400 / 600 | Readable at any size; Unbounded is too wide for paragraphs |
+
+Other candidates I tested: Syncopate (very close to Turbo, wide and light-bodied), Krona One, Dela Gothic One, Rubik Mono One (all good heavy blocks), Orbitron, Michroma, Oxanium. If you prefer a lighter, Turbo-like wordmark, Syncopate Bold is the swap.
+
+**On the F1 fonts themselves:** the samples you shared are labeled "F1 Turbo", "F1 Torque" and "F1 Regular", the same names Formula 1 uses for its own typefaces. Your page says its fonts are independently made, but I can't verify that or the license, and the download is gone. So I'm treating them as inspiration only and not shipping them.
 
 Self-host the font files rather than loading from Google Fonts, which fits the "control our own data" goal and avoids third-party requests.
 
@@ -128,7 +132,7 @@ Tokens are in `brand/tokens.css` so the site, Substack posts and graphics share 
 
 ## 10. Open items
 1. Approve the RAC · IN · GC wordmark direction and the red accent. If approved, I'll hand-refine the glyph and produce favicon/avatar exports.
-2. The wordmark's letterforms: Saira is a stand-in. Do we want a custom-drawn extended italic like the current logo?
+2. Wordmark letterforms: Unbounded 900 is the stand-in. Syncopate Bold is the lighter alternative; a custom-drawn version would come later.
 3. NDA / source-naming rules once the hosts have confirmed (§3).
 4. Show title and segment names. "Racing Inc." is the brand; is the show called something else?
 5. Trademark search for "Racing Inc." and the final symbol before we invest heavily. "Racing Inc." is a generic-sounding name, so check for conflicts in media/entertainment.
