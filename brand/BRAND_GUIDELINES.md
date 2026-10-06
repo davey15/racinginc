@@ -51,7 +51,7 @@ The mark reads as both words at once. Black field, white and red, with two silve
 **Design rule: no dead space.** RAC sits high-left and IN·GC sits low-right; one speed bar fills the corner above IN·GC and another fills the corner below RAC, and the tagline spans the full width underneath. Letters nearly touch. Keep this tight in every variant (stacked, avatar, banner).
 
 - Files: `brand/logo/wordmark-red.svg` (vector, text converted to outlines). Regenerate with `brand/logo/build_logo.py`.
-- Typeface used for the draft: Unbounded 900 (open license), set in outlines and slanted 10°. The previous two-line wordmark (RACING / INC.) from the draft cover and banner stays as the **stacked variant** until the new one is approved.
+- Typeface used for the draft: Anybody at width 150 / weight 900 (open license), set in outlines and slanted 10°. The previous two-line wordmark (RACING / INC.) from the draft cover and banner stays as the **stacked variant** until the new one is approved.
 - Needed variants: horizontal (done), stacked, white-on-black, black-on-white, single-color.
 - Clear space: the width of the "I" on all sides. Don't stretch, outline, or add effects; no placing on busy photo areas without a dark scrim.
 
@@ -87,17 +87,17 @@ Contrast: white and silver on black pass WCAG AA for body text. **Red `#D40000` 
 
 ## 6. Typography
 
-**What you like (from your samples):** wide, squared-off, heavy letterforms where each character fills its whole block (the Turbo/Torque style). Saira was too narrow and curvy, so it's out.
+**What you like:** ultra-wide, heavy, flat-sided letterforms where each character fills its block, like the F1 Turbo/Torque samples and **Brigends Expanded** (a paid font, $29, by Multype Studio). Saira and Unbounded were too narrow or too rounded, so both are out.
 
-**Recommended (proposed), all open-licensed (SIL OFL), free for commercial use, self-hostable:**
+**Recommended (proposed), open-licensed (SIL OFL), free for commercial use, self-hostable:**
 
 | Role | Font | Style | Why |
 |---|---|---|---|
-| Wordmark / display headlines | **Unbounded** | 900, uppercase | Wide, rounded-square, full-block characters. Closest open match to your Torque/Turbo samples |
-| Labels / tagline | **Unbounded** | 500, uppercase, wide tracking | Same family, lighter; matches the tracked tagline |
-| Body / UI | **Inter** | 400 / 600 | Readable at any size; Unbounded is too wide for paragraphs |
+| Wordmark / display headlines | **Anybody** (variable) | width 150 (max), weight 900, uppercase | The closest free match to Brigends Expanded: ultra-expanded, black, flat |
+| Labels / tagline | **Anybody** | width 100, weight 600, uppercase, wide tracking | Same family, readable at small sizes |
+| Body / UI | **Inter** | 400 / 600 | Readable at any size; the display face is too wide for paragraphs |
 
-Other candidates I tested: Syncopate (very close to Turbo, wide and light-bodied), Krona One, Dela Gothic One, Rubik Mono One (all good heavy blocks), Orbitron, Michroma, Oxanium. If you prefer a lighter, Turbo-like wordmark, Syncopate Bold is the swap.
+If you'd rather own the real thing, **Brigends Expanded ($29)** is the exact look you showed. Check its license for commercial use and for converting to logo outlines before buying. If we buy it, the wordmark only needs one swap in `build_logo.py`.
 
 **On the F1 fonts themselves:** the samples you shared are labeled "F1 Turbo", "F1 Torque" and "F1 Regular", the same names Formula 1 uses for its own typefaces. Your page says its fonts are independently made, but I can't verify that or the license, and the download is gone. So I'm treating them as inspiration only and not shipping them.
 
@@ -134,7 +134,7 @@ Tokens are in `brand/tokens.css` so the site, Substack posts and graphics share 
 
 ## 10. Open items
 1. Approve the RAC · IN · GC wordmark direction and the red accent. If approved, I'll hand-refine the glyph and produce favicon/avatar exports.
-2. Wordmark letterforms: Unbounded 900 is the stand-in. Syncopate Bold is the lighter alternative; a custom-drawn version would come later.
+2. Wordmark letterforms: Anybody (free) or Brigends Expanded ($29, exact match to your reference). Your call.
 3. NDA / source-naming rules once the hosts have confirmed (§3).
 4. Show title and segment names. "Racing Inc." is the brand; is the show called something else?
 5. Trademark search for "Racing Inc." and the final symbol before we invest heavily. "Racing Inc." is a generic-sounding name, so check for conflicts in media/entertainment.

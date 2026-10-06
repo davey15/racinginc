@@ -10,7 +10,7 @@
   --ri-flag: #FFC400;       /* optional secondary highlight: caution-flag yellow */
 
   /* Type (all open-licensed; see guidelines for the F1 font caveat) */
-  --ri-font-display: "Unbounded", "Arial Black", sans-serif;   /* headlines: 900 uppercase */
+  --ri-font-display: "Anybody", "Arial Black", sans-serif;      /* headlines: font-stretch 150%, weight 900, uppercase */
   --ri-font-body: "Inter", system-ui, sans-serif;            /* body copy */
   --ri-tracking-label: 0.28em;                               /* wide-tracked uppercase labels, like the tagline */
 }

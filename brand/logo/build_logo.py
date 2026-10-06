@@ -1,12 +1,18 @@
-"""Builds brand/logo/*.svg. Needs: pip install fonttools brotli; npm i @fontsource/unbounded
+"""Builds brand/logo/*.svg. Needs: pip install fonttools brotli; npm i @fontsource-variable/anybody
 Usage: FONTS_DIR=<node_modules/@fontsource> python3 build_logo.py"""
 import os
 from fontTools.ttLib import TTFont
 from fontTools.pens.svgPathPen import SVGPathPen
 
 FD = os.environ.get('FONTS_DIR', 'node_modules/@fontsource')
-heavy = TTFont(f'{FD}/unbounded/files/unbounded-latin-900-normal.woff2')
-light = TTFont(f'{FD}/unbounded/files/unbounded-latin-500-normal.woff2')
+from fontTools.varLib import instancer
+
+def anybody(wght, wdth=150):
+    f = TTFont(f'{FD}-variable/anybody/files/anybody-latin-standard-normal.woff2')
+    return instancer.instantiateVariableFont(f, {'wght': wght, 'wdth': wdth})
+
+heavy = anybody(900)      # ultra-expanded black for the wordmark
+light = anybody(600, 100) # tagline, narrower so it stays legible
 OUT = os.path.dirname(os.path.abspath(__file__)) + '/'
 SKEW = -10          # degrees, a single slant applied to the whole lockup
 RED, WHITE, SILVER, BLACK = '#D40000', '#FFFFFF', '#9AA0A6', '#0A0A0B'
@@ -61,9 +67,9 @@ def wordmark(bg=BLACK, rac=WHITE, accent=RED, bar=SILVER, tagline=True):
     body += f'<rect x="0" y="{g:.1f}" width="{xa:.1f}" height="{t_bar:.1f}" fill="{bar}"/>'
     bottom = D
     if tagline:
-        txt = 'WHERE MONEY, POWER, AND SPEED COLLIDE.'; sc = 0.1
+        txt = 'WHERE MONEY, POWER, AND SPEED COLLIDE.'; sc = 0.3
         _, w0 = glyphs(light, txt, 0, 0, sc)
-        while (width - w0) / (len(txt) - 1) / sc < 40: sc -= 0.005; _, w0 = glyphs(light, txt, 0, 0, sc)
+        while (width - w0) / (len(txt) - 1) / sc < 170: sc -= 0.005; _, w0 = glyphs(light, txt, 0, 0, sc)
         track = (width - w0) / (len(txt) - 1) / sc
         t, _ = glyphs(light, txt, 0, track, sc)
         ty = D + g * 1.6 + CAP * sc * 0.75 + CAP * 0.06   # cap height of tagline sits just below the lowered row
