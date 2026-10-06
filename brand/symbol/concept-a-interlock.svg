@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Racing Inc. symbol, concept A: interlocked G and C">
+  <rect width="512" height="512" fill="#0A0A0B"/>
+  <g transform="translate(256 256) skewX(-12) translate(-256 -256)" fill="none">
+    <!-- C (silver) -->
+    <path d="M232 322 A92 92 0 1 1 232 190" stroke="#9AA0A6" stroke-width="44" transform="translate(-22 0)"/>
+    <!-- G (white) with a knockout gap against the C -->
+    <g transform="translate(40 0)">
+      <path d="M232 190 A92 92 0 1 0 348 256 L274 256" stroke="#0A0A0B" stroke-width="58"/>
+      <path d="M232 190 A92 92 0 1 0 348 256 L274 256" stroke="#FFFFFF" stroke-width="44"/>
+    </g>
+  </g>
+</svg>

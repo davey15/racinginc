@@ -1,0 +1,15 @@
+/* Racing Inc. Media: design tokens (DRAFT v0.1). Source of truth: brand/BRAND_GUIDELINES.md */
+:root {
+  /* Color */
+  --ri-black: #0A0A0B;      /* primary background */
+  --ri-carbon: #17181A;     /* surfaces / cards */
+  --ri-graphite: #5B6066;   /* checker mid-tone, borders */
+  --ri-silver: #9AA0A6;     /* "INC." silver, secondary text on dark */
+  --ri-white: #FFFFFF;      /* primary text on dark, wordmark */
+  --ri-flag: #FFC400;       /* single accent: caution-flag yellow (proposed) */
+
+  /* Type (all open-licensed; see guidelines for the F1 font caveat) */
+  --ri-font-display: "Saira", "Arial Narrow", sans-serif;   /* headlines: 800 italic */
+  --ri-font-body: "Inter", system-ui, sans-serif;            /* body copy */
+  --ri-tracking-label: 0.28em;                               /* wide-tracked uppercase labels, like the tagline */
+}
