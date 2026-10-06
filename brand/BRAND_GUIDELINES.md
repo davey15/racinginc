@@ -46,7 +46,9 @@ Anyone who appreciates F1, from the casual fan to the die-hard, who wants entert
 - **IN** in Rosso Corsa red (shared by both words)
 - a **fused G+C** glyph in red as the final letter: the **G** completes RACING, the **C** completes INC.
 
-The mark reads as both words at once. Black field, white and red, silver tagline beneath in wide-tracked caps.
+The mark reads as both words at once. Black field, white and red, with two silver **speed bars** and the tagline in wide-tracked caps.
+
+**Design rule: no dead space.** RAC sits high-left and IN·GC sits low-right; one speed bar fills the corner above IN·GC and another fills the corner below RAC, and the tagline spans the full width underneath. Letters nearly touch. Keep this tight in every variant (stacked, avatar, banner).
 
 - Files: `brand/logo/wordmark-red.svg` (vector, text converted to outlines). Regenerate with `brand/logo/build_logo.py`.
 - Typeface used for the draft: Unbounded 900 (open license), set in outlines and slanted 10°. The previous two-line wordmark (RACING / INC.) from the draft cover and banner stays as the **stacked variant** until the new one is approved.
