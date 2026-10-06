@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Racing Inc. Media Brand Guidelines</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--ri-black); color: var(--ri-offwhite); font: 400 17px/1.6 var(--ri-font-body); -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 72px 0; border-top: 1px solid var(--ri-carbon); }
+  .eyebrow { font: italic 800 12px/1 var(--ri-font-display); font-stretch: 125%; letter-spacing: .3em; text-transform: uppercase; color: var(--ri-red); margin: 0 0 14px; }
+  h1, h2, h3 { font-family: var(--ri-font-display); font-style: italic; font-stretch: 140%; font-weight: 900; text-transform: uppercase; line-height: 1.05; margin: 0 0 20px; }
+  h2 { font-size: clamp(28px, 5vw, 44px); }
+  h3 { font-size: 18px; font-stretch: 125%; letter-spacing: .02em; margin: 32px 0 10px; }
+  p { margin: 0 0 14px; max-width: 68ch; }
+  .muted { color: var(--ri-silver); }
+  code { font: 13px ui-monospace, Menlo, monospace; background: var(--ri-carbon); padding: 2px 6px; border-radius: 4px; color: var(--ri-silver); }
+  img { max-width: 100%; display: block; }
+  nav { position: sticky; top: 0; z-index: 5; background: rgba(10,10,11,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--ri-carbon); }
+  nav .wrap { display: flex; gap: 22px; overflow-x: auto; padding-top: 14px; padding-bottom: 14px; white-space: nowrap; }
+  nav a { color: var(--ri-silver); text-decoration: none; font: 600 12px/1 var(--ri-font-body); letter-spacing: .16em; text-transform: uppercase; }
+  nav a:hover { color: var(--ri-offwhite); }
+  /* hero */
+  .hero { padding: 96px 0 80px; text-align: center; border: 0; }
+  .hero img { width: min(86vw, 760px); margin: 0 auto 28px; }
+  .tag { font: italic 700 clamp(11px, 1.7vw, 15px)/1.2 var(--ri-font-display); font-stretch: 125%; letter-spacing: .32em; text-indent: .32em; text-transform: uppercase; color: var(--ri-silver); }
+  .hero small { display: block; margin-top: 40px; color: var(--ri-graphite); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+  /* grids */
+  .grid { display: grid; gap: 16px; }
+  .g2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .g3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .card { background: var(--ri-carbon); border-radius: 10px; padding: 22px; }
+  .tile { border-radius: 10px; display: grid; place-items: center; min-height: 190px; padding: 28px; position: relative; }
+  .tile img { width: 100%; max-width: 360px; }
+  .tile .cap { position: absolute; left: 14px; bottom: 10px; font: 600 11px/1 var(--ri-font-body); letter-spacing: .14em; text-transform: uppercase; opacity: .7; }
+  .on-black { background: var(--ri-black); border: 1px solid var(--ri-carbon); }
+  .on-light { background: #fff; color: #0A0A0B; }
+  .on-red { background: var(--ri-red); }
+  /* swatches */
+  .sw { border-radius: 10px; overflow: hidden; background: var(--ri-carbon); }
+  .sw div { height: 110px; }
+  .sw p { margin: 0; padding: 12px 14px 14px; font-size: 14px; line-height: 1.4; }
+  .sw b { display: block; font-size: 15px; }
+  .bar { display: flex; height: 38px; border-radius: 8px; overflow: hidden; margin: 8px 0 6px; }
+  /* type specimens */
+  .spec-d { font: italic 900 clamp(34px, 6vw, 64px)/1 var(--ri-font-display); font-stretch: 150%; text-transform: uppercase; margin: 6px 0 10px; }
+  .spec-d span { color: var(--ri-red); }
+  .spec-b { font-size: 18px; max-width: 60ch; }
+  .spec-l { font: italic 600 13px/1 var(--ri-font-display); font-stretch: 100%; letter-spacing: .2em; text-transform: uppercase; color: var(--ri-silver); }
+  /* clear space */
+  .clear { position: relative; display: inline-block; padding: 54px; background: repeating-linear-gradient(45deg, #17181A 0 8px, #101112 8px 16px); border-radius: 10px; }
+  .clear img { width: 420px; max-width: 70vw; outline: 1px dashed var(--ri-red); }
+  .clear i { position: absolute; font: 600 11px/1 var(--ri-font-body); color: var(--ri-silver); letter-spacing: .1em; }
+  /* dont */
+  .dont { position: relative; background: var(--ri-carbon); border-radius: 10px; padding: 28px 20px 40px; text-align: center; }
+  .dont::after { content: "✕"; position: absolute; top: 8px; right: 12px; color: var(--ri-red); font-weight: 700; }
+  .dont img { width: 70%; margin: 6px auto 0; }
+  .dont p { position: absolute; left: 0; right: 0; bottom: 10px; margin: 0 auto; font-size: 13px; color: var(--ri-silver); }
+  /* mock banner */
+  .banner { position: relative; aspect-ratio: 3/1; border-radius: 10px; overflow: hidden; display: grid; place-items: center; text-align: center; background: var(--ri-black); border: 1px solid var(--ri-carbon); }
+  .banner::before { content: ""; position: absolute; inset: 0; opacity: .13; background: conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, #000 0) 0 0/64px 64px; transform: skewX(-12deg) scale(1.3); mask: linear-gradient(90deg, transparent 35%, #000); -webkit-mask: linear-gradient(90deg, transparent 35%, #000); }
+  .banner img { position: relative; width: 54%; margin: 0 auto 10px; }
+  .banner .tag { position: relative; font-size: clamp(7px, 1.2vw, 12px); }
+  .avatars { display: flex; gap: 18px; align-items: flex-end; flex-wrap: wrap; }
+  .avatars img { border-radius: 50%; box-shadow: 0 0 0 1px var(--ri-graphite); }
+  .avatars figure { margin: 0; text-align: center; font-size: 12px; color: var(--ri-silver); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--ri-carbon); vertical-align: top; }
+  th { color: var(--ri-silver); font: 600 12px/1 var(--ri-font-body); letter-spacing: .14em; text-transform: uppercase; }
+  .yes::before, .no::before { font-weight: 700; margin-right: 8px; }
+  .yes::before { content: "✓"; color: #5FB37A; } .no::before { content: "✕"; color: var(--ri-red); }
+  ul.clean { list-style: none; padding: 0; margin: 0; } ul.clean li { margin-bottom: 8px; }
+  footer { padding: 40px 0 60px; color: var(--ri-graphite); font-size: 13px; border-top: 1px solid var(--ri-carbon); }
+  @media print { nav { display: none; } section { break-inside: avoid-page; padding: 40px 0; } body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a href="#essence">Essence</a><a href="#logo">Logo</a><a href="#color">Color</a><a href="#type">Type</a><a href="#voice">Voice</a><a href="#imagery">Imagery</a><a href="#channels">Channels</a><a href="#open">Open items</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <img src="logo/racing-inc-logo.svg" alt="Racing Inc. Media">
+  <div class="tag">Where money, power, and speed collide.</div>
+  <small>Brand guidelines · Draft 1</small>
+</div></header>
+
+<section id="essence"><div class="wrap">
+  <p class="eyebrow">01 · Essence</p>
+  <h2>Smart. Funny.<br>Inside the paddock.</h2>
+  <p>Racing Inc. Media is a live F1 show, blog and newsletter about <b>the money, power and speed behind the sport</b>, hosted by Vanessa Castro and Chloe Wooten.</p>
+  <div class="grid g3" style="margin-top:28px">
+    <div class="card"><h3 style="margin-top:0">Insider access</h3><p class="muted">Chloe is an engineer, and her husband was Max Verstappen's engineer at Red Bull. Real perspective, and with permission, real sources.</p></div>
+    <div class="card"><h3 style="margin-top:0">Brains + snark</h3><p class="muted">Engineering qualifications on one side, a Harvard political science degree on the other. Deep, then hilarious.</p></div>
+    <div class="card"><h3 style="margin-top:0">Business of racing</h3><p class="muted">Budgets, contracts, politics, power. Not another engineering channel; the funny, sharp friends who explain it.</p></div>
+  </div>
+</div></section>
+
+<section id="logo"><div class="wrap">
+  <p class="eyebrow">02 · Logo</p>
+  <h2>One mark. Use it as drawn.</h2>
+  <p>Supplied by David as vector artwork. Never retype, redraw, stretch or recolor it. The final letter is a custom red G, which doubles as our symbol.</p>
+  <div class="grid g2" style="margin-top:24px">
+    <div class="tile on-black"><img src="logo/racing-inc-logo.svg" alt=""><span class="cap">Primary · on black</span></div>
+    <div class="tile on-light"><img src="logo/racing-inc-logo-on-light.svg" alt=""><span class="cap">On light</span></div>
+    <div class="tile" style="background:#17181A"><img src="logo/racing-inc-logo-white.svg" alt=""><span class="cap">One-color white</span></div>
+    <div class="tile" style="background:#e9e9ea"><img src="logo/racing-inc-logo-black.svg" alt=""><span class="cap" style="color:#0A0A0B">One-color black</span></div>
+  </div>
+
+  <h3>Symbol and avatars</h3>
+  <p>The red G is the favicon, avatar and watermark. In circles it sits inside the central ~60%.</p>
+  <div class="avatars">
+    <figure><img src="logo/racing-inc-avatar.svg" width="160" alt=""><br>160 px</figure>
+    <figure><img src="logo/racing-inc-avatar.svg" width="64" alt=""><br>64 px</figure>
+    <figure><img src="logo/racing-inc-avatar.svg" width="32" alt=""><br>32 px</figure>
+    <figure><img src="logo/racing-inc-avatar.svg" width="16" alt=""><br>16 px (favicon)</figure>
+    <figure><img src="logo/racing-inc-symbol.svg" width="120" alt="" style="border-radius:8px;background:#fff;padding:14px;box-shadow:none"><br>Symbol on white</figure>
+  </div>
+
+  <h3>Clear space and minimum size</h3>
+  <p>Keep at least <b>half the logo's height</b> clear on every side. Minimum width <b>120 px</b> (25 mm in print); below that, use the symbol.</p>
+  <div class="clear"><img src="logo/racing-inc-logo.svg" alt=""></div>
+
+  <h3>Don't</h3>
+  <div class="grid g3">
+    <div class="dont"><img src="logo/racing-inc-logo.svg" alt="" style="transform:scaleX(1.5) scaleY(.7)"><p>Stretch or squash</p></div>
+    <div class="dont"><img src="logo/racing-inc-logo.svg" alt="" style="filter:sepia(1) hue-rotate(80deg) saturate(4)"><p>Recolor</p></div>
+    <div class="dont"><img src="logo/racing-inc-logo.svg" alt="" style="filter:drop-shadow(4px 6px 3px #BE1E2D)"><p>Add effects</p></div>
+    <div class="dont" style="background:#BE1E2D"><img src="logo/racing-inc-logo.svg" alt=""><p style="color:#fff">Put it on red</p></div>
+    <div class="dont"><img src="logo/racing-inc-logo.svg" alt="" style="transform:rotate(-8deg)"><p>Rotate</p></div>
+    <div class="dont"><img src="logo/racing-inc-logo.svg" alt="" style="width:30%"><p>Shrink below minimum with the full logo</p></div>
+  </div>
+</div></section>
+
+<section id="color"><div class="wrap">
+  <p class="eyebrow">03 · Color</p>
+  <h2>Black first. One red.</h2>
+  <div class="grid g3">
+    <div class="sw"><div style="background:#0A0A0B;box-shadow:inset 0 0 0 1px #5B6066"></div><p><b>Black</b>#0A0A0B<br><span class="muted">Primary background</span></p></div>
+    <div class="sw"><div style="background:#17181A"></div><p><b>Carbon</b>#17181A<br><span class="muted">Cards, panels</span></p></div>
+    <div class="sw"><div style="background:#5B6066"></div><p><b>Graphite</b>#5B6066<br><span class="muted">Borders, checker mid-tone</span></p></div>
+    <div class="sw"><div style="background:#9AA0A6"></div><p><b>Silver</b>#9AA0A6<br><span class="muted">Secondary text, tagline</span></p></div>
+    <div class="sw"><div style="background:#F9F9F9"></div><p><b>Off-white</b>#F9F9F9<br><span class="muted">Logo letters, text on dark</span></p></div>
+    <div class="sw"><div style="background:#BE1E2D"></div><p><b>Racing Red</b>#BE1E2D<br><span class="muted">The G, CTAs, one highlight</span></p></div>
+  </div>
+  <h3>Proportion</h3>
+  <div class="bar"><div style="flex:70;background:#17181A;display:grid;place-items:center;font-size:12px">70% black / carbon</div><div style="flex:20;background:#F9F9F9;color:#0A0A0B;display:grid;place-items:center;font-size:12px">20% off-white / silver</div><div style="flex:10;background:#BE1E2D;display:grid;place-items:center;font-size:12px">10% red</div></div>
+  <p class="muted" style="margin-top:12px">Contrast: off-white and silver on black pass WCAG AA for body text. Racing Red on black is about 3.2:1, so it's for large text and graphics only. Use off-white on a red chip for small labels.</p>
+</div></section>
+
+<section id="type"><div class="wrap">
+  <p class="eyebrow">04 · Typography</p>
+  <h2>Wide. Bold. Leaning forward.</h2>
+  <div class="card" style="margin-bottom:16px">
+    <div class="spec-l">Display · Anybody · width 150 · 900 · italic · uppercase</div>
+    <div class="spec-d">Money. Power. <span>Speed.</span></div>
+    <p class="muted" style="margin:0">Headlines, graphic text and thumbnails. Echoes the slant of the logo. Open-licensed (SIL OFL); self-hosted.</p>
+  </div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="spec-l">Body · Inter · 400 / 600</div>
+    <p class="spec-b" style="margin-top:14px">Why did the cost cap change everything? Because in a sport where money buys speed, limiting the money rewrites the whole pecking order, and the teams have been arguing about the accounting ever since.</p>
+  </div>
+  <div class="card">
+    <div class="spec-l">Labels · Anybody · width 100 · 600 · +0.2em · uppercase</div>
+    <p class="muted" style="margin:14px 0 0">Use for tags, segment names and captions under ~14 px.</p>
+  </div>
+</div></section>
+
+<section id="voice"><div class="wrap">
+  <p class="eyebrow">05 · Voice</p>
+  <h2>Two friends who know too much.</h2>
+  <table>
+    <tr><th style="width:50%">We are</th><th>We are not</th></tr>
+    <tr><td class="yes">Quick, witty, confident</td><td class="no">Mean about private lives</td></tr>
+    <tr><td class="yes">Insider-informed, plain-spoken</td><td class="no">Jargon-heavy or gatekeeping</td></tr>
+    <tr><td class="yes">Warm and conversational</td><td class="no">Corporate or press-release stiff</td></tr>
+    <tr><td class="yes">Opinionated, with receipts</td><td class="no">Rumour-mongering or clickbait</td></tr>
+  </table>
+  <ul class="clean" style="margin-top:24px">
+    <li><b>1.</b> Explain every technical or financial term in one sentence, with a joke if one fits.</li>
+    <li><b>2.</b> Take positions, and say which parts are fact and which are opinion.</li>
+    <li><b>3.</b> Punch up at situations and institutions, never down at individuals.</li>
+    <li><b>4.</b> Insider information is used only with permission. NDA status is being confirmed; until then, no naming sources.</li>
+  </ul>
+</div></section>
+
+<section id="imagery"><div class="wrap">
+  <p class="eyebrow">06 · Imagery & layout</p>
+  <h2>No dead space.</h2>
+  <p>Tight crops, tight letter-spacing, elements that interlock instead of floating. Black-and-white host portraits against a checkered flag, same crop and treatment for both hosts. The flag is a faint texture, never behind body text.</p>
+  <ul class="clean">
+    <li><b>Thumbnails:</b> one face, big emotion, 3 words max in the display font, one red highlight word, small logo in a corner.</li>
+    <li><b>Cleanup:</b> remove the faint “HOLLYWOOD” watermark from the draft cover, and confirm rights to the portraits and the flag image.</li>
+    <li><b>Third-party marks:</b> F1, team and driver marks are never part of our identity.</li>
+  </ul>
+</div></section>
+
+<section id="channels"><div class="wrap">
+  <p class="eyebrow">07 · Channels</p>
+  <h2>@racingincmedia</h2>
+  <p class="muted">YouTube · X · Instagram. Display name: <b style="color:var(--ri-offwhite)">Racing Inc. Media</b>.</p>
+  <h3>Banner sketch (X header, 3:1)</h3>
+  <div class="banner"><div><img src="logo/racing-inc-logo.svg" alt=""><div class="tag">Where money, power, and speed collide.</div></div></div>
+  <h3>Sizes</h3>
+  <table>
+    <tr><th>Asset</th><th>Size</th><th>Content</th></tr>
+    <tr><td>Avatar</td><td>800×800</td><td>Avatar file, exported to PNG</td></tr>
+    <tr><td>YouTube banner</td><td>2560×1440 (safe 1546×423)</td><td>Logo + tagline on black, faint flag</td></tr>
+    <tr><td>X header</td><td>1500×500</td><td>Same, recomposed wide</td></tr>
+    <tr><td>Instagram</td><td>1080×1080 / 1080×1920</td><td>Black template, logo corner mark</td></tr>
+    <tr><td>Thumbnail</td><td>1280×720</td><td>See imagery</td></tr>
+  </table>
+  <h3>Bio (draft)</h3>
+  <div class="card"><p style="margin:0">Two women. One paddock. Zero filter. Live F1 talk, insider access and receipts, twice a week. Where money, power, and speed collide.</p></div>
+  <h3>Show</h3>
+  <p class="muted">Live, 20–30 minutes, twice a week. Vanessa films in Austin and Chloe in the UK. Recaps, money and politics, interviews (some on site at races), fan questions. Substack articles start next week; target the live show in about a month; first milestone: 10,000 subscribers.</p>
+</div></section>
+
+<section id="open"><div class="wrap">
+  <p class="eyebrow">08 · Open items</p>
+  <h2>Needs your call.</h2>
+  <ol>
+    <li><b>“INC.” in the logo.</b> The supplied logo reads RACING. Is the brand "Racing" in the logo and "Racing Inc. Media" elsewhere, or do we want an "INC. MEDIA" lockup?</li>
+    <li><b>The G.</b> Does it nod to anything (initials, a letter G + C)? It affects how we explain the symbol.</li>
+    <li><b>Display font:</b> Anybody (free) or Brigends Expanded ($29)?</li>
+    <li><b>Show title and segment names.</b></li>
+    <li><b>Tagline lockup</b> under the logo: approve?</li>
+    <li><b>NDA and sources:</b> what can be named on air?</li>
+    <li><b>Photos:</b> clean cover without the watermark.</li>
+    <li><b>Trademark search</b> for “Racing Inc.” and the logo.</li>
+  </ol>
+</div></section>
+
+<footer><div class="wrap">Racing Inc. Media · Brand guidelines, Draft 1 · Text source: <code>BRAND_GUIDELINES.md</code> · Tokens: <code>tokens.css</code></div></footer>
+</body>
+</html>

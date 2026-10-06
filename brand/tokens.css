@@ -1,16 +1,19 @@
-/* Racing Inc. Media: design tokens (DRAFT v0.1). Source of truth: brand/BRAND_GUIDELINES.md */
+/* Racing Inc. Media: design tokens (Draft 1). Source of truth: brand/BRAND_GUIDELINES.md */
+@font-face { font-family: "Anybody"; src: url("assets/fonts/anybody-variable.woff2") format("woff2"); font-weight: 100 900; font-stretch: 50% 150%; font-style: normal; font-display: swap; }
+@font-face { font-family: "Anybody"; src: url("assets/fonts/anybody-variable-italic.woff2") format("woff2"); font-weight: 100 900; font-stretch: 50% 150%; font-style: italic; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("assets/fonts/inter-variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+
 :root {
   /* Color */
   --ri-black: #0A0A0B;      /* primary background */
-  --ri-carbon: #17181A;     /* surfaces / cards */
-  --ri-graphite: #5B6066;   /* checker mid-tone, borders */
-  --ri-silver: #9AA0A6;     /* "INC." silver, secondary text on dark */
-  --ri-white: #FFFFFF;      /* primary text on dark, wordmark */
-  --ri-red: #D40000;        /* single accent: Rosso Corsa; large text and graphics only on black */
-  --ri-flag: #FFC400;       /* optional secondary highlight: caution-flag yellow */
+  --ri-carbon: #17181A;     /* surfaces */
+  --ri-graphite: #5B6066;   /* borders, checker mid-tone */
+  --ri-silver: #9AA0A6;     /* secondary text, tagline */
+  --ri-offwhite: #F9F9F9;   /* logo letters, primary text on dark */
+  --ri-red: #BE1E2D;        /* the G, CTAs, one highlight; ~3.2:1 on black, so large text/graphics only */
 
-  /* Type (all open-licensed; see guidelines for the F1 font caveat) */
-  --ri-font-display: "Anybody", "Arial Black", sans-serif;      /* headlines: font-stretch 150%, weight 900, uppercase */
-  --ri-font-body: "Inter", system-ui, sans-serif;            /* body copy */
-  --ri-tracking-label: 0.28em;                               /* wide-tracked uppercase labels, like the tagline */
+  /* Type */
+  --ri-font-display: "Anybody", "Arial Black", sans-serif;  /* italic, uppercase, font-stretch 125-150%, weight 800-900 */
+  --ri-font-body: "Inter", system-ui, sans-serif;
+  --ri-tracking-label: 0.2em;
 }
